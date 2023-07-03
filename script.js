@@ -31,6 +31,7 @@ function game(playerSelection , computerSelection){
 }
 for(let i = 0 ; i <5 ; i++){
 let computerSelection = getComputerChoice();
-let playerSelection = prompt("Enter your Weapon");
+let user = prompt("Enter your Weapon");
+let playerSelection =user.toLowerCase();
 console.log(game(playerSelection , computerSelection));
 }
