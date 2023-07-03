@@ -4,10 +4,7 @@ function getComputerChoice(){
     let computerChoice =  choices[selectChoice];
     return computerChoice;
 }
-function game(playerSelection , computerSelection){
-    let computerScore = 0;
-    let playerScore = 0;
-    let round = 0;   
+function playRound(playerSelection , computerSelection){ 
     if (playerSelection === computerSelection) {
         roundWinner = 'tie'
       }
@@ -16,22 +13,38 @@ function game(playerSelection , computerSelection){
         (playerSelection === 'sissor' && computerSelection === 'paper') ||
         (playerSelection === 'paper' && computerSelection === 'rock')
       ) {
-        playerScore++;
-        roundWinner = 'you Won this round! '+playerSelection +'  beats '+computerSelection;
+        roundWinner = 'you Win! '+playerSelection +'  beats '+computerSelection;
       }
       else if (
         (computerSelection === 'rock' && playerSelection === 'sissor') ||
         (computerSelection === 'sissor' && playerSelection === 'paper') ||
         (computerSelection === 'paper' && playerSelection === 'rock')
       ) {
-        computerScore++;
-        roundWinner = 'you lose this round! '+ computerSelection +'  beats '+playerSelection;
+        roundWinner = 'you lose! '+ computerSelection +'  beats '+playerSelection;
       }
       return roundWinner;        
 }
-for(let i = 0 ; i <5 ; i++){
+function game(){
+let playerScore = 0;
+let computerScore = 0;
+for(let i = 0 ; i < 5 ; i++){
 let computerSelection = getComputerChoice();
 let user = prompt("Enter your Weapon");
 let playerSelection =user.toLowerCase();
-console.log(game(playerSelection , computerSelection));
+let result = playRound(playerSelection , computerSelection);
+console.log(result);
+if (result.startsWith("you Win!")){
+    playerScore++;
 }
+else if (result.startsWith("you lose!")){
+    computerScore++;
+}}
+if (playerScore > computerScore){
+console.log("Conglatulations you win this game "+computerScore+" "+playerScore);
+}
+else if(playerScore > computerScore){
+console.log("you lose this game "+computerScore+" "+playerScore);}
+else{
+    console.log("Draw game "+computerScore+" "+playerScore)
+}}
+game();
