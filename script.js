@@ -40,11 +40,14 @@ else if (result.startsWith("you lose! ")){
     computerScore++;
 }}
 if (playerScore > computerScore){
+console.log("==================================");
 console.log("Conglatulations you win this game ");
 }
 else if(playerScore < computerScore){
+console.log("==================================");
 console.log("you lose this game ");}
 else{
-    console.log("Draw game ")
+  console.log("==================================");
+  console.log("Draw game ")
 }}
 game();
