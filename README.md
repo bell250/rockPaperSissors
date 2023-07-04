@@ -1,3 +1,3 @@
 # rockPaperSissor
-# MY week-3 project
+# MY week-4 project
 # HELLO ODIN
