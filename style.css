@@ -1,0 +1,70 @@
+*{	
+box-sizing: border-box;
+}
+body{
+    color: yellow;
+   text-align: center;
+   background-color: #002244;
+   min-width: 60px;
+   background-image:url(images/black.jpg);
+}
+.container{
+    background-color: black;
+    height: 300px;
+    width: 500px;
+    margin: 0 auto;
+    box-shadow: 0px 1px 5px 0px #ffb900;
+}
+.score{
+    background-color: cornsilk;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    font-size: 30px;
+}
+#computerScore , #playerScore{
+    color: red;
+    font-weight: bolder;
+}
+.button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+img{
+    height: 100px;
+}
+#rock:hover,#paper:hover,#sissors:hover{
+    box-shadow: 0px 1px 5px 0px #ffb900;
+}
+#final{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    line-height: 35px;
+    height: 62px;
+    margin-top:10.1px;
+    padding: 10px;
+    background-color: #333333;
+}
+#again{
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  transition: box-shadow .2s ease-in-out;
+}
+#again:hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
